@@ -1,48 +1,34 @@
 [app]
 
-# (str) Title of your application
+# Application information
 title = Inaya
-
-# (str) Package name
 package.name = inayaapp
-
-# (str) Package domain (needed for android/ios packaging)
 package.domain = org.test
 
-# (str) Source code where the main.py live
+# Source code location
 source.dir = .
+source.include_exts = py,png,jpg,kv,atlas,gif,mp3,wav
 
-# (list) Source files to include (let empty to include all the files)
-source.include_exts = py,png,jpg,kv,atlas
-
-# (str) Application versioning
+# Version
 version = 0.1
 
-# (list) Application requirements
+# Requirements
 requirements = python3,kivy
 
-# (str) Supported orientation
+# App display settings
 orientation = portrait
-
-# (bool) Indicate if the application should be fullscreen or not
 fullscreen = 0
 
-# (list) Permissions
-android.permissions = INTERNET
+# Permissions
+android.permissions = INTERNET,RECORD_AUDIO
 
-# (int) Target Android API
-android.api = 33
-
-# (int) Minimum API required
+# Android SDK / NDK settings
+android.api = 31
 android.minapi = 21
-
-# (str) Android NDK version
 android.ndk = 25b
+android.accept_sdk_license = True
 
 [buildozer]
 
-# (int) Log level
 log_level = 2
-
-# (int) Display warning if buildozer is run as root
 warn_on_root = 1
